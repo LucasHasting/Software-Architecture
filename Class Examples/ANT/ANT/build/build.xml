@@ -1,0 +1,128 @@
+
+<project name="webserver" default="all" basedir=".">
+
+    <property file="build.properties"/>
+
+    <property name="app.path"      value="/${app.name}"/>
+    <property name="build.home"    value="${basedir}/build"/>
+    <property name="dist.home"     value="${basedir}/dist"/>
+    <property name="docs.home"     value="${basedir}/docs"/>
+    <property name="src.home"      value="${basedir}/src"/>
+
+
+    <!--  ============ Compilation Control Options ==================== -->
+
+    <property name="compile.debug"       value="true"/>
+    <property name="compile.deprecation" value="false"/>
+    <property name="compile.optimize"    value="true"/>
+    <property name="compile.includeant"    value="false"/>
+
+
+    <path id="compile.classpath">
+
+        <!--
+        <pathelement location="${jaaslounge.jar}"/>
+        <pathelement location="${jcifs.jar}"/>
+        <pathelement location="${jcifs-ext.jar}"/>
+        <pathelement location="${activation.jar}"/>
+        <pathelement location="${jcert.jar}"/>
+        <pathelement location="${jnet.jar}"/>
+        <pathelement location="${jsse.jar}"/>
+        <pathelement location="${mail.jar}"/>
+        <pathelement location="${ojdbc14.jar}"/>
+        -->
+
+
+    </path>
+
+
+
+    <!-- ========= All Target ====================================== -->
+
+    <!--
+
+      The "all" target is a shortcut for running the "clean" target followed
+      by the "compile" target, to force a complete recompile.
+
+    -->
+
+    <target name="all" depends="clean,compile"
+   description="Clean build and dist directories, then compile"/>
+
+
+
+    <!-- ========= Clean Target ==================================== -->
+
+    <!--
+
+      The "clean" target deletes any previous "build" and "dist" directory,
+      so that you can be ensured the application can be built from scratch.
+
+    -->
+
+    <target name="clean" description="Delete old build and dist directories">
+        <delete dir="${build.home}"/>
+        <delete dir="${dist.home}"/>
+        <delete dir="${docs.home}"/>
+    </target>
+
+    <!-- ======== Compile Target ==================================== -->
+    
+    <target name="compile" depends="prepare" description="Compile Java sources">
+
+        <!-- Compile Java classes as necessary -->
+        <javac srcdir="${src.home}"
+            destdir="${build.home}"
+            debug="${compile.debug}"
+            deprecation="${compile.deprecation}"
+            optimize="${compile.optimize}"
+            includeantruntime="${compile.includeant}">
+            <classpath refid="compile.classpath"/>
+        </javac>
+
+        <!-- Copy manifest -->
+        <copy todir="${build.home}/META-INF/" file="MANIFEST.MF" />
+
+    </target>
+
+    <!-- ======== Distribute Target ==================================== -->
+    
+    <target name="dist" depends="compile" description="Create binary distribution">
+
+        <!-- Create application JAR file -->
+        <jar jarfile="${dist.home}/${app.name}-${app.version}.jar"
+            manifest="MANIFEST.MF"
+         basedir="${build.home}"/>
+
+        <!-- Copy additional files to ${dist.home} as necessary -->
+
+    </target>
+
+    <!-- ======== Deploy Target ==================================== -->
+    
+    <target name="deploy" depends="dist" description="Deploy binary distribution">
+
+        <copy todir="${deploy.home}">
+            <fileset file="${dist.home}/${app.name}-${app.version}.jar" />
+        </copy>
+
+    </target>
+
+    <!-- ============= Prepare Target ================================== -->
+
+
+    <target name="prepare">
+
+        <mkdir  dir="${build.home}"/>
+        <mkdir  dir="${build.home}/META-INF"/>
+        <mkdir  dir="${build.home}/META-INF/classes"/>
+        
+        <mkdir  dir="${dist.home}"/>
+        
+        <mkdir  dir="${docs.home}"/>
+
+    </target>
+
+
+
+</project>

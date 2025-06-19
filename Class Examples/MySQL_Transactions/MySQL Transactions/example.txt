@@ -1,0 +1,15 @@
+use banks
+
+-- START TRANSACTION or BEGIN or BEGIN WORK
+-- COMMIT
+-- ROLLBACK
+
+START TRANSACTION;
+
+INSERT INTO users (id, username)
+VALUE (1, "Joe");
+
+UPDATE users SET email = "Joe@una.edu"
+WHERE id = 1;
+
+COMMIT;
