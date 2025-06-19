@@ -1,0 +1,24 @@
+<?php session_start(); ?>
+<!-- Reference: Class Code !-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <h3>Register</h3>
+        <?php
+        if (isset($_SESSION['error'])) {
+            echo "<em>" . $_SESSION['error'] . "</em>";
+            unset($_SESSION['error']);
+        }
+        ?>
+        <form action="new_user.php" method="post">
+            Username: <input type="text" name="form_username"><br>
+            Password: <input type="password" name="pwd"><br>
+            Repeat: <input type="password" name="repeat"><br>
+            <input type="submit">
+        </form>
+    </body>
+</html>

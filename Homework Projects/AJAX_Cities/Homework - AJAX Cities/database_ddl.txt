@@ -1,0 +1,18 @@
+create database ajax_demo;
+
+use ajax_demo;
+create table states (id int primary key auto_increment, name varchar(100));
+
+insert into states (name) values ('Alabama');
+insert into states (name) values ('Colorado');
+insert into states (name) values ('Alaska');
+
+create table cities (id int primary key auto_increment, state_name varchar(100), city_name varchar(100));
+
+insert into cities (state_name, city_name) values ('Alabama', 'Florence');
+insert into cities (state_name, city_name) values ('Alabama', 'Gulf Shores');
+insert into cities (state_name, city_name) values ('Colorado', 'Golden');
+insert into cities (state_name, city_name) values ('Colorado', 'Pagosa Springs');
+insert into cities (state_name, city_name) values ('Colorado', 'Rifle');
+insert into cities (state_name, city_name) values ('Alabama', 'Paint Rock');
+insert into cities (state_name, city_name) values ('Alaska', 'Homer');
