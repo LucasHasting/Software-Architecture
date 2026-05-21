@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>JS Tip Calc</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" async></script>
+</head>
+<body>
+    <noscript>
+        <p>Sorry, Javascript is required for this page to work</p>
+    </noscript>
+
+    <div class="centergrey">
+
+        <h1>Tip Calculator</h1>
+
+        <form name="tip">
+            <table>
+                <tr>
+                    <td>Total Cost: </td>
+                    <td><input type="text" name="cost"></td>
+                </tr>
+                <tr>
+                    <td>Service Quality: </td>
+                    <td class="radbuts">
+                        <input type="radio" name="quality" value="slow">Poor<br>
+                        <input type="radio" name="quality" value="average">OK<br>
+                        <input type="radio" name="quality" value="great">Super<br>
+                    </td>
+                </tr>
+            </table>
+
+        <div class="control">
+            <input type="button" value="Compute" onClick="compute();">
+            <input type="reset" value="Clear">
+        </div>
+
+        <p>Tip: <input type="text" name="amount">
+        <hr>
+
+        </form>
+
+    </div>

@@ -1,0 +1,28 @@
+/* color css file */
+
+body {
+    margin-left: 32%;
+    margin-right: 32%;
+    border: 1px solid black;
+    padding: 1%;
+}
+
+h3 {
+    text-align: center;
+    font-family: Times, serif;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+label {
+    display: inline-block;
+    width: 55px;
+    vertical-align: middle;
+}
+
+canvas {
+    float: right;
+    background-color: #000000;
+    margin-right: 5%;
+    border: 1px solid black;
+}

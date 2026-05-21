@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>JS Color Picker</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" async></script>
+</head>
+<body>
+    <h3>JS Color Picker</h3>
+
+    <canvas id="swatch" height="100" width="100">No canvas support</canvas>
+
+    <div>
+    <form>
+        <label for="red">Red: </label>
+        <input type="range" min="0" max="255" id="red" name="red" value="0" onChange="slider('red');" autofocus><br>
+        <label for="green">Green: </label>
+        <input type="range" min="0" max="255" id="green" name="green" value="0" onChange="slider('green');"><br>
+        <label for="blue">Blue: </label>
+        <input type="range" min="0" max="255" id="blue" name="blue" value="0" onChange="slider('blue');">
+    </div>
+    <p id="hexcolor">Color = #000000 </p>

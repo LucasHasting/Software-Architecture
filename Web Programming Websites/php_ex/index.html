@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>USD/CAD Currency Converter</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="center">
+
+    <h1>Currency Converter</h1>
+
+    <form method="GET" action="convert.php">
+        <label for="amount">Amount: </label>
+        <!--
+        regex: 
+        \d{} => digit{number of digits}
+        , => or
+        -->
+        <input type="text" id="amount" name="name" placeholder="nnnnnn.nn" maxlength="9" pattern="\d{1,6}\.\d{2}" required autocomplete="off">
+        
+        <br>
+
+        <fieldset>
+            <legend>Conversion</legend>
+            <input type="radio" id="fromus" name="conversion" value="USD" checked>
+            <label for="fromus">U.S. Dollars to Canadian</label>
+            <br>
+            <input type="radio" id="fromca" name="conversion" value="CAD">
+            <label for="fromca">Candian Dollars to U.S.</label>
+        </fieldset>
+
+        <br>
+
+        <button type="submit" class="submit">Convert</button>
+        <button type="reset">Clear</button>
+    </form>
+
+    </div>

@@ -1,0 +1,31 @@
+/* tip calc styles */
+
+.centergrey {
+    text-align : center;
+    background-color : DarkSeaGreen;
+    margin-left : auto;
+    margin-right : auto;
+    width : 40%;
+}
+
+h1 {
+    color : FireBrick;
+}
+
+table {
+    margin-left : auto;
+    margin-right : auto;
+}
+
+td {
+    padding : 5px;
+    text-align : right;
+}
+
+.radbuts {
+    text-align : left;
+}
+
+.control {
+    padding : 15px;
+}

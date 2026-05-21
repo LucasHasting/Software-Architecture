@@ -1,0 +1,48 @@
+<!--
+Name: Lucas Hasting
+Description: get some zips with city/state
+Date: 4/22/2026
+Instructor: James Jerkins
+
+Sources: Class Notes/Textbook
+         https://worldpopulationreview.com/state-rankings/state-with-the-longest-name
+         https://www.businessinsider.com/longest-town-names-us-list-2019-7#30-letters-bonadelle-ranchos-madera-ranchos-california-1
+         https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions
+         https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Zipper</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" async></script>
+</head>
+<body>
+    <div class="center">
+        <div class="box">
+            <div>
+                <h1>Zipper (The Zip Finder)</h1>
+            </div>
+            
+            <div>
+                <form>
+                    <label for="city">City Name:</label>
+
+                    <!--On Blur Event: no longer interacting with the field -->
+                    <input type="text" id="city" name="city" required maxlength="64"
+                     pattern="^[0-9a-zA-Z \-]{1,50}$" placeholder="city" onblur="isValid('50', 'city');">
+                    <button type="button" name="searchbutton" onclick="get('state', true);">Search</button>
+                </form>
+            </div>
+
+            <div>&nbsp;</div>
+            
+            <span id="search_state">&nbsp;</span>
+            
+            <div>&nbsp;</div>
+            
+            <span id="search_zip">&nbsp;</span>
+        </div>
+    </div>  

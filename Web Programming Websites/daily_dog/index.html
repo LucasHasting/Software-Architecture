@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>The Daily Dog</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="dog.css">
+    <!-- async allows the webpage to render before script is loaded -->
+    <script src="dog.js" async></script>
+</head>
+<body>
+    <div class="page_grid">
+        <div class="header">
+            <img class="img-left" src="dog2.png" alt="DoG">
+            <span class="headline">The Daily Dog</span>
+            <img class="img-right" src="dog1.png" alt="dOg">
+            <br>
+            <q>All the news that's fit to chew</q>
+            <p>&bullet; Vol 1, Issue 19, &bullet; September 27, 2019 &bullet;</p>
+        </div> <!-- end of header -->
+        
+        <div class="content">
+            <p class="headline">Man bites dog, dog files lawsuit</p>
+
+            <p>By Scooby Doo, Barksville</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
+        </div> <!-- end of content -->
+            
+        <div class="sidebar">
+            <span class="headline">Sign up today!</span>
+            <form class="form-grid" method="POST" action="post_debugger.php">
+                <label for="name">Name: </label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                
+                <label for="gender">Gender: </label>
+                <select id="gender" name="gender" size="2" required>
+                    <option>Male</option>
+                    <option selected>Female</option>
+                </select>
+                
+                <label for="favfood">Favorite Food: </label>
+                <select id="favfood" name="favfood" size="3">
+                    <option>Beef</option>
+                    <option selected>Chicken</option>
+                    <option>Fish</option>
+                    <option>Pork</option>
+                    <option>Rawhide</option>
+                    <option>Lettuce</option>
+                    <option>Cactus</option>
+                </select>               
+ 
+                <label for="age">Age (Dog Years): </label>
+                <input type="text" id="age" name="age" required>
+                <div>
+                    <input type="text" name="age" value="age1" checked>between 0 and 1 years<br>
+                    <input type="text" name="age" value="age2">between 1 and 3 years<br>
+                    <input type="text" name="age" value="age3">between 3 and 7 years<br>
+                    <input type="text" name="age" value="age4">7+ years<br>
+                </div>
+
+                <label for="sub">Subscribe: </label>
+                <input type="checkbox" id="sub" name="sub" checked>
+
+                <p>&nbsp;</p> <!-- non breaking space -->
+                <!--<input type="button" value="Subscribe"> same behavior as bellow -->
+                <button type="submit" onclick="return validate();">Subscribe</button> <!-- default behavior does nothing -->
+            </form>
+            <noscript>
+                <p class="alert">Javascript must be enabled for this page</p>
+            </noscript>
+        </div> <!-- end of sidebar -->
+        
+        <div class="footer">
+            <p>Copyright &copy; 2019, Dog Inc., All Rights Reserved</p>
+        </div> <!-- end of footer -->
+
+    </div> <!-- end of the page-grid -->

@@ -1,0 +1,60 @@
+/* media queries */
+
+/* phone */
+@media screen and (max-width: 480px) {
+    body {
+        background-color: white;
+        font-size: 1.5em;
+    }
+
+    a.button {
+        display: block;
+    }
+}
+
+/* tablet */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+
+    body {
+        background-color: cyan;
+    }
+
+}
+
+/* monitor */
+
+@media screen and (min-width: 1025px) {
+    body {
+        background-color: yellow;
+        font-size: 2.0em;
+    }
+}
+
+/* all other styles */
+
+body {
+    font-family: Georgia, serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+a.button {
+    background: LightGrey;
+    border: 4px outset Grey;
+    text-decoration: none;
+    color: Black;
+    padding: 3px;
+    margin: 2px;
+}
+
+p {
+    line-height: 1.75;
+}
+
+#footer {
+    font-size: 0.75em;
+    text-align: center;
+    font-style: italic;
+}

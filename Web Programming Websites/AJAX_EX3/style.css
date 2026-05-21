@@ -1,0 +1,39 @@
+body {
+    background-color: SlateGrey;
+}
+
+h1 {
+    text-align: center; 
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input, button {
+    margin-left: 10px;
+}
+
+button {
+    border-radius: 8px;
+    background-color: Gainsboro;
+}
+
+input:user-invalid {
+    border-color: red;
+}
+
+.center {
+    margin-right: auto;
+    margin-left: auto;
+    width: 40%;
+}
+
+.box {
+    background-color: LightBlue;
+    border: 5px outset Black;
+    padding: 10px;
+    margin-top: 96px;
+}

@@ -1,0 +1,60 @@
+/* Daily Dog stylesheet */
+
+/* will go in a <div> */
+.page_grid {
+    display : grid;
+    grid-auto-rows : auto;
+    grid-template-columns : repeat(9,1fr); /* 9 equal size columns */
+    grid-template-areas : 
+        "hd hd hd hd hd hd   hd hd hd"
+        "ct ct ct ct ct ct   sb sb sb"
+        "ft ft ft ft ft ft   ft ft ft";
+    grid-gap : 0.25em;
+}
+
+.header {
+    grid-area : hd;
+    background-color : lightgray;
+    text-align : center;
+    font-family : "URW Chancery L", cursive;
+    font-size : 1.5em; /* M's are relative to device */
+}
+
+.footer {
+    grid-area : ft;
+    background-color : lightgray;
+}
+
+.content {
+    grid-area : ct;
+    background-color : gray;
+}
+
+.sidebar {
+    grid-area : sb;
+    background-color : green;
+}
+
+.headline {
+    font-size : 2.15em;
+}
+
+.img-left {
+    float : left;
+}
+
+.img-right {
+    float : right;
+}
+
+.form-grid {
+    display : grid;
+    grid-template-columns : auto auto;
+    grid-gap : 0.75em 0.1em;
+    justify-items : left;
+    margin : 1em;
+}
+
+.alert {
+    background-color : lime;
+}

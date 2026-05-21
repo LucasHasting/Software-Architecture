@@ -1,0 +1,36 @@
+/* tip calc styles */
+
+.centergrey {
+    text-align : center;
+    background-color : DarkSeaGreen;
+    margin-left : auto;
+    margin-right : auto;
+    width : 40%;
+    padding : 0em 1em 1em 1em;
+}
+
+h1 {
+    color : FireBrick;
+}
+
+form {
+    display : grid;
+    grid-template-columns: 33% auto;
+    justify-items : start;
+    align-items : center;
+}
+
+label {
+    justify-self : end;
+    margin-right : 0.5em;
+}
+
+.gridradio {
+    text-align : left;
+    margin-right : 2em;
+    margin-top : 1em;
+}
+
+button {
+    box-shadow : 10px 10px 10px #888888;
+}

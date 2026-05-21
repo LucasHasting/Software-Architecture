@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>EV Search</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" async></script>
+</head>
+<body>
+    <div class="center">
+        <div class="box">
+            <div>
+                <h1>Electric Car Finder</h1>
+            </div>
+            
+            <div>
+                <form>
+                    <label for="searchtext">Car Name:</label>
+
+                    <!--On Blur Event: no longer interacting with the field -->
+                    <input type="text" id="searchtext" name="searchtext" required maxlength="64"
+                     pattern="^[0-9a-zA-Z !\-\.]{1,64}$" placeholder="model name" onblur="isValid();">
+                    <button type="button" name="searchbutton" onclick="getCar();">Search</button>
+                </form>
+            </div>
+
+            <div>
+                &nbsp;
+            </div>
+
+            <div>
+                <output id="searchResult">&nbsp;</output>
+            </div>
+        </div>
+    </div>  
